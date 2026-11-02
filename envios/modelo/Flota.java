@@ -41,5 +41,17 @@ public class Flota {
         }
         return cantidad;
     }
-}
 
+    // Etapa 3: entre los que sirven para el peso, el de menor tarifa por km
+    public Vehiculo masEconomico(int pesoKg) {
+        Vehiculo mejor = null;
+        for (Vehiculo v : vehiculos) {
+            if (v.getCapacidadKg() >= pesoKg) {
+                if (mejor == null || v.tarifaPorKm() < mejor.tarifaPorKm()) {
+                    mejor = v;
+                }
+            }
+        }
+        return mejor;
+    }
+}

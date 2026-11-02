@@ -17,5 +17,10 @@ public class Camion extends Vehiculo {
     public String describir() {
         return super.describir() + ", camión de " + ejes + " ejes";
     }
+
+    @Override
+    public double tarifaPorKm() {
+        return 3000 + 1000 * ejes;
+    }
 }
 

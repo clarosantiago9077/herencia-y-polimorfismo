@@ -1,6 +1,6 @@
 package envios.modelo;
 
-public class Vehiculo {
+public abstract class Vehiculo {
 
     private String placa;
     private int capacidadKg;
@@ -20,5 +20,13 @@ public class Vehiculo {
 
     public String describir() {
         return placa + " (" + capacidadKg + " kg)";
+    }
+
+    // Etapa 3: cada hija concreta debe escribirlo
+    public abstract double tarifaPorKm();
+
+    // Etapa 3: método concreto que usa lo que todavía no conoce
+    public double costoEnvio(double km) {
+        return km * tarifaPorKm();
     }
 }

@@ -17,4 +17,9 @@ public class Moto extends Vehiculo {
     public String describir() {
         return super.describir() + ", moto de " + cilindraje + " cc";
     }
+
+    @Override
+    public double tarifaPorKm() {
+        return 1200;
+    }
 }

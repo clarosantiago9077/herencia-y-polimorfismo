@@ -1,5 +1,6 @@
 package envios.app;
 
+import envios.modelo.Bicicleta;
 import envios.modelo.Camion;
 import envios.modelo.Flota;
 import envios.modelo.Moto;
@@ -19,6 +20,16 @@ public class Main {
         System.out.println(flota.agregar(m1));
         flota.mostrar();
         System.out.println(flota.cantidadCamiones());
+
+        // ---------- Etapa 3 ----------
+        System.out.println(m1.costoEnvio(12));
+        System.out.println(c1.costoEnvio(12));
+        Bicicleta b1 = new Bicicleta("BIC001", 10);
+        flota.agregar(b1);
+        flota.mostrar();
+        System.out.println(flota.masEconomico(8).getPlaca());
+        System.out.println(flota.masEconomico(22).getPlaca());
+        System.out.println(flota.masEconomico(500).getPlaca());
+        System.out.println(flota.masEconomico(9000));
     }
 }
-
