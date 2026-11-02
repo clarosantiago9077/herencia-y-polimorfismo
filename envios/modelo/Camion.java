@@ -1,6 +1,6 @@
 package envios.modelo;
 
-public class Camion extends Vehiculo {
+public class Camion extends Vehiculo implements Asegurable {
 
     private int ejes;
 
@@ -22,5 +22,9 @@ public class Camion extends Vehiculo {
     public double tarifaPorKm() {
         return 3000 + 1000 * ejes;
     }
-}
 
+    @Override
+    public double valorSeguro() {
+        return 400000 * ejes;
+    }
+}

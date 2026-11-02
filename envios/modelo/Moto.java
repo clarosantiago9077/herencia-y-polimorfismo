@@ -1,6 +1,6 @@
 package envios.modelo;
 
-public class Moto extends Vehiculo {
+public class Moto extends Vehiculo implements Asegurable {
 
     private int cilindraje;
 
@@ -21,5 +21,10 @@ public class Moto extends Vehiculo {
     @Override
     public double tarifaPorKm() {
         return 1200;
+    }
+
+    @Override
+    public double valorSeguro() {
+        return 80000 + cilindraje * 500;
     }
 }

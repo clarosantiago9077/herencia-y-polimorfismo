@@ -54,4 +54,15 @@ public class Flota {
         }
         return mejor;
     }
+
+    // Etapa 4: solo suma los que cumplen el contrato Asegurable
+    public double totalSeguros() {
+        double total = 0;
+        for (Vehiculo v : vehiculos) {
+            if (v instanceof Asegurable a) {
+                total += a.valorSeguro();
+            }
+        }
+        return total;
+    }
 }

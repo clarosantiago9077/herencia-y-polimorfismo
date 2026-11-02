@@ -1,9 +1,12 @@
 package envios.app;
 
+import envios.modelo.Asegurable;
 import envios.modelo.Bicicleta;
+import envios.modelo.Bodega;
 import envios.modelo.Camion;
 import envios.modelo.Flota;
 import envios.modelo.Moto;
+import java.util.ArrayList;
 
 public class Main {
 
@@ -31,5 +34,20 @@ public class Main {
         System.out.println(flota.masEconomico(22).getPlaca());
         System.out.println(flota.masEconomico(500).getPlaca());
         System.out.println(flota.masEconomico(9000));
+
+        // ---------- Etapa 4 ----------
+        System.out.println(m1.valorSeguro());
+        System.out.println(c1.valorSeguro());
+        System.out.println(flota.totalSeguros());
+
+        ArrayList<Asegurable> asegurables = new ArrayList<>();
+        asegurables.add(c1);
+        asegurables.add(new Bodega("Bodega Chipre", 300));
+        double suma = 0;
+        for (Asegurable a : asegurables) {
+            System.out.println(a.valorSeguro());
+            suma += a.valorSeguro();
+        }
+        System.out.println(suma);
     }
 }
