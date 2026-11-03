@@ -80,4 +80,5 @@ Herencia: Moto, Camion y Bicicleta usan extends Vehiculo y reciben la placa y la
 Polimorfismo: en mostrar(), un solo for-each llama a describir() y cada vehículo responde distinto.
 
 
-<img width="2289" height="989" alt="diagrama_clases" src="https://github.com/user-attachments/assets/cc10a1ee-0ca4-49bf-8fee-b7899f34ee55" />
+<img width="1462" height="792" alt="diagrama_flota drawio" src="https://github.com/user-attachments/assets/9ec49de2-8606-4f95-90f2-0392cbb35e1e" />
+
